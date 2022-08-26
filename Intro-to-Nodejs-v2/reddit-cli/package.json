@@ -10,5 +10,10 @@
     "reddit": "./reddit.mjs"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.10",
+    "open": "^8.4.0",
+    "yargs": "^17.5.1"
+  }
 }
