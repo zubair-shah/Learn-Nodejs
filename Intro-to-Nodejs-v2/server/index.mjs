@@ -3,38 +3,25 @@ import http, { createServer } from "http";
 const host = "localhost";
 const port = 8000;
 
-const server = createServer((req, res) => {
+const server = http.createServer((req, res) => {
   if (req.method === "POST") {
     let body = "";
-
     req.on("data", (chunk) => {
-      console.log(chunk);
-      body += chunk.toString;
+      body += chunk;
     });
 
-    req.on(
-      ("end",
-      () => {
-        if (req.headers[`content-type`] === "application/JSON") {
-          body = JSON.parse(body);
-        }
-      })
-    );
-    console.log(body);
-    res.writeHead(2021);
+    req.on("close", () => {
+      console.log(body);
+    });
+
+    res.writeHead(200);
     res.end("ok");
   } else {
     res.writeHead(200);
-    res.send("hello requrst from zubair server");
+    res.end("hi from server");
   }
-  req.on("data", (chunk) => {
-    console.log(chunk);
-    body += chunk.toString;
-  });
-  res.writeHead(200);
-  res.send("hello requrst from zubair server");
+});
 
-  server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
-  });
+server.listen(port, host, () => {
+  console.log(`your server is running on ${host}/${port}`);
 });
