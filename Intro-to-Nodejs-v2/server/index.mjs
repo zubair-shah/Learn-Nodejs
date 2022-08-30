@@ -5,16 +5,15 @@ const port = 8000;
 
 const server = http.createServer((req, res) => {
   if (req.method === "POST") {
-    let body = "";
+    let body = "  ";
     req.on("data", (chunk) => {
       body += chunk;
     });
 
-    req.on("close", () => {
-      console.log(body);
-    });
+    console.log("hello");
 
     res.writeHead(200);
+ 
     res.end("ok");
   } else {
     res.writeHead(200);
