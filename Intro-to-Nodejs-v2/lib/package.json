@@ -2,7 +2,7 @@
   "name": "lib",
   "version": "1.0.0",
   "description": "",
-  "main": "utils.spec.js",
+  "main": "utils.js",
   "scripts": {
     "test": "jest"
   },
