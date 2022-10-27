@@ -9,7 +9,7 @@
   "bin": {
     "reddit": "./reddit.mjs"
   },
-  "author": "",
+  "author": "zubair-shaikh",
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^3.2.10",
