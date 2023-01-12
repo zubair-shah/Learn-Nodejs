@@ -5,9 +5,9 @@ console.log('add() \n should add two numbers')
 
 try {
     assert.strictEqual(add(1, 1), 3)
-    console.log('SUCCESS')
+   console.log("  ✅ passed");  
 }
 catch (e) {
-    console.log('FAIL')
+   console.log("  🚫 fail");
     console.error(e)
 }

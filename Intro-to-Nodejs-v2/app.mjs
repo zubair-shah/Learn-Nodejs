@@ -6,15 +6,15 @@
 // ============Module-Ecmascript-Style==============
 import { StartNodejs } from "./index.mjs";
 import { readFile, writeFile } from "fs/promises";
-import { write } from "fs";
-import { url } from "inspector";
+// import { write } from "fs";
+// import { url } from "inspector";
 let template = await readFile(
   new URL("template.html", import.meta.url),
   "utf-8"
 );
 
 const data = {
-  title: "zubair",
+  title: "zubair shaikh",
   para: "Started Learning Nodejs",
 };
 
